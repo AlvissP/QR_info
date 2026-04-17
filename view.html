@@ -51,16 +51,22 @@
 
 <div class="info">
     <div><span class="label">Certificate Number/Số chứng chỉ:</span> <span id="cert"></span></div>
+    <div><span class="label">Equipment/Thiết bị:</span> <span id="equip"></span></div>
+    <div><span class="label">Manufacturer/Nhà sản xuất:</span> <span id="manu"></span></div>
     <div><span class="label">Serial Number/Serial thiết bị:</span> <span id="serial"></span></div>
     <div><span class="label">Calibration Label/Số tem:</span> <span id="label"></span></div>
+    <div><span class="label">Recalibration Recommnended/Ngày hiệu chuẩn khuyến nghị:</span> <span id="exp"></span></div>
 </div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 
 document.getElementById("cert").textContent = params.get("cert") || "";
+document.getElementById("equip").textContent = params.get("equip") || "";
+document.getElementById("manu").textContent = params.get("manu") || "";    
 document.getElementById("serial").textContent = params.get("serial") || "";
 document.getElementById("label").textContent = params.get("label") || "";
+document.getElementById("exp").textContent = params.get("exp") || "";    
 </script>
 
 </body>
