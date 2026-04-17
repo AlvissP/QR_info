@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Thông tin QR</title>
+</head>
+<body>
+
+<h2>Thông tin từ QR Code</h2>
+
+<p id="result"></p>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("result").innerHTML =
+    "Mã số: " + params.get("b") + "<br>" +
+    "Khách hàng: " + params.get("c") + "<br>" +
+    "Ngày: " + params.get("d");
+</script>
+
+</body>
+</html>
